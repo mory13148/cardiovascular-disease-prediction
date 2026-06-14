@@ -1,10 +1,15 @@
-# Cardiovascular Disease Prediction using Machine Learning
+# Cardiovascular Disease Detection and Severity Assessment using Machine Learning
 
 ## Project Overview
 
-Cardiovascular diseases are among the leading causes of death worldwide. Early detection can help healthcare professionals take preventive measures and improve patient outcomes.
+Cardiovascular diseases are among the leading causes of death worldwide. Early diagnosis and severity assessment can help healthcare professionals provide timely interventions and improve patient outcomes.
 
-This project aims to develop a Machine Learning model capable of predicting the presence of cardiovascular disease based on patient medical data.
+This project develops Machine Learning models capable of:
+
+1. Detecting the presence of cardiovascular disease.
+2. Assessing the severity level of the disease.
+
+By combining disease detection and severity classification, the project aims to simulate a more realistic clinical decision-support system.
 
 ---
 
@@ -13,33 +18,65 @@ This project aims to develop a Machine Learning model capable of predicting the 
 * Perform data cleaning and preprocessing
 * Conduct Exploratory Data Analysis (EDA)
 * Engineer meaningful features
-* Train and compare multiple Machine Learning models
-* Evaluate model performance using relevant metrics
-* Interpret model predictions
+* Develop a binary classification model for disease detection
+* Develop a multiclass classification model for severity assessment
+* Compare multiple Machine Learning algorithms
+* Evaluate model performance using appropriate metrics
+* Interpret model predictions using explainable AI techniques
 * Build an interactive prediction application
 
 ---
 
 ## Dataset
 
-The project uses the Heart Disease Dataset available on Kaggle.
-
-The dataset contains medical information about patients, including:
+The project uses a Heart Disease Dataset containing patient clinical information such as:
 
 * Age
 * Sex
 * Chest Pain Type
 * Resting Blood Pressure
 * Cholesterol
+* Fasting Blood Sugar
+* Resting ECG Results
 * Maximum Heart Rate
-* Exercise Induced Angina
+* Exercise-Induced Angina
 * ST Depression
-* Other clinical measurements
+* Additional cardiovascular indicators
 
-Target variable:
+---
+
+## Prediction Tasks
+
+### Task 1 — Disease Detection
+
+Binary Classification
+
+Target:
 
 * 0 = No Heart Disease
 * 1 = Heart Disease
+
+Goal:
+
+Predict whether a patient is affected by cardiovascular disease.
+
+---
+
+### Task 2 — Disease Severity Assessment
+
+Multiclass Classification
+
+Target:
+
+* 0 = No Disease
+* 1 = Mild Disease
+* 2 = Moderate Disease
+* 3 = Significant Disease
+* 4 = Severe Disease
+
+Goal:
+
+Predict the severity level of cardiovascular disease.
 
 ---
 
@@ -51,40 +88,46 @@ cardiovascular-disease-prediction/
 ├── data/
 ├── models/
 ├── reports/
+├── app/
 │
-├── heart_disease_project.ipynb
+├── notebooks/
+│   ├── disease_detection.ipynb
+│   └── disease_severity.ipynb
+│
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── LICENSE
 ```
 
 ---
 
-## Project Workflow
+## Machine Learning Pipeline
 
 ### 1. Data Cleaning
 
-* Missing values detection
+* Missing value analysis
 * Duplicate removal
-* Data type verification
-* Outlier analysis
+* Data validation
+* Outlier investigation
 
-### 2. Exploratory Data Analysis (EDA)
+### 2. Exploratory Data Analysis
 
 * Age distribution
-* Cholesterol distribution
+* Cholesterol analysis
 * Blood pressure analysis
 * Disease prevalence
+* Severity distribution
 * Correlation analysis
 
 ### 3. Feature Engineering
 
-* Creation of new variables
-* Encoding categorical features
+* Feature transformation
 * Feature scaling
+* Feature selection
 
 ### 4. Machine Learning Models
 
-The following models will be evaluated:
+Models evaluated:
 
 * Logistic Regression
 * Decision Tree
@@ -94,7 +137,7 @@ The following models will be evaluated:
 
 ### 5. Model Evaluation
 
-Metrics used:
+Binary Classification Metrics:
 
 * Accuracy
 * Precision
@@ -102,30 +145,30 @@ Metrics used:
 * F1 Score
 * ROC-AUC
 
-### 6. Model Interpretation
+Multiclass Classification Metrics:
+
+* Accuracy
+* Macro F1 Score
+* Weighted F1 Score
+* Confusion Matrix
+
+### 6. Explainability
 
 * Feature Importance
 * SHAP Analysis
+* Model Interpretation
 
 ---
 
-## Technologies Used
+## Deployment
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* XGBoost
-* SHAP
-* Jupyter Notebook
+A Streamlit application will allow users to:
 
----
-
-## Results
-
-Results will be added after model training and evaluation.
+* Enter patient information
+* Predict disease presence
+* Predict disease severity
+* Visualize prediction confidence
+* Interpret model outputs
 
 ---
 
@@ -133,17 +176,18 @@ Results will be added after model training and evaluation.
 
 * Hyperparameter tuning
 * Cross-validation
-* Deployment with Streamlit
-* Real-time prediction interface
-* Advanced explainability techniques
+* Ensemble learning
+* Real-time deployment
+* Clinical risk score integration
+* Advanced explainable AI methods
 
 ---
 
 ## Disclaimer
 
-This project is developed for educational and research purposes only.
+This project is intended for educational and research purposes only.
 
-The predictions generated by the model should not be considered medical advice and must not replace professional healthcare diagnosis.
+Predictions generated by the models should not be considered medical advice and must not replace professional healthcare diagnosis.
 
 ---
 
@@ -151,4 +195,6 @@ The predictions generated by the model should not be considered medical advice a
 
 **Mory Adama Dembélé**
 
-Data Science & Machine Learning Enthusiast
+Aspiring Data Scientist | Machine Learning Enthusiast
+
+Interested in Healthcare AI, Predictive Modeling, and Explainable Machine Learning.
